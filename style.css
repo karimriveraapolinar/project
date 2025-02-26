@@ -1,0 +1,78 @@
+body {
+    background-image: url('https://example.com/enchantedforest.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+   
+    font-family: 'Georgia', serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1 {
+    color: #6c13b4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+#story {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #383333;
+    color:  #ec7c20;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #621b8b;
+}
+
+#stats {
+    margin-top: 20px;
+    padding: 15px;
+    
+    border-radius: 5px;
+}
+
+#restart {
+    margin-top: 20px;
+    background-color: #2e5090;
+}
+
+.ending {
+    font-weight: bold;
+    color: #2e5090;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #2e5090;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.node-image {
+    width: 50%; /* or any other size you prefer */
+    max-width: 50%; /* or any other size you prefer */
+}
+
+
