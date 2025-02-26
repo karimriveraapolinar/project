@@ -1,4 +1,15 @@
+
+// Start background music
+const backgroundMusic = new Audio('path/to/your/background-music.mp3');
+backgroundMusic.addEventListener('canplaythrough', function() {
+    backgroundMusic.play().catch(error => {
+        console.error('Failed to play background music:', error);
+    });
+});
+    
+// Request player name
 let userName = prompt("Enter your name:") || "Adventurer";
+
 // Game data is stored in a separate script file
 const gameData = {
     playerStats: {
