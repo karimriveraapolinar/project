@@ -1,6 +1,6 @@
 
 // Start background music
-const backgroundMusic = new Audio('path/to/your/background-music.mp3');
+const backgroundMusic = new Audio('packingtonspound.mp3');
 backgroundMusic.addEventListener('canplaythrough', function() {
     backgroundMusic.play().catch(error => {
         console.error('Failed to play background music:', error);
@@ -33,6 +33,7 @@ const gameData = {
             
             "path": {
                 "text": "The path winds through ancient oaks until you reach a bridge crossing a stream. A strange blue light flickers beneath it, while the path ahead splits toward a hill and a valley.",
+                "image": "path.jpeg",
                 "choices": [
                     { "text": "Investigate the blue light", "nextNode": "blueLight", "statChange": { "wisdom": 1 } },
                     { "text": "Take the path up the hill", "nextNode": "hillPath", "statChange": { "courage": 1 } },
@@ -42,6 +43,7 @@ const gameData = {
             
             "offTrail": {
                 "text": "Fighting through thick undergrowth, you encounter a tiny forest sprite glowing with green light. It watches you with cautious curiosity.",
+                "image": "offTrail.jpeg",
                 "choices": [
                     { "text": "Offer the sprite food from your pack", "nextNode": "spriteGlade", "statChange": { "friendship": 2 } },
                     { "text": "Try to catch the sprite", "nextNode": "spriteTrap", "statChange": { "courage": 1, "friendship": -2 } }
@@ -50,6 +52,7 @@ const gameData = {
             
             "travelers": {
                 "text": "An old woman with a walking stick approaches. 'Seeking adventure in the enchanted forest?' she asks with a knowing smile. 'I've traveled these woods for decades.'",
+                "image": "travelers.jpeg",
                 "choices": [
                     { "text": "Ask her to guide you", "nextNode": "elderWisdom", "statChange": { "wisdom": 2 } },
                     { "text": "Politely decline and enter alone", "nextNode": "mysteriousChanting", "statChange": { "courage": 2 } }
@@ -58,6 +61,7 @@ const gameData = {
             
             "blueLight": {
                 "text": "Beneath the bridge, you discover a water nymph holding a glowing crystal. 'For noticing me,' she says, 'I offer you a choice: protection or direction to the heart of the forest.'",
+                "image": "blueLight.jpeg",
                 "choices": [
                     { "text": "Accept a blessing of protection", "nextNode": "nymphBlessing", "statChange": { "wisdom": 2 } },
                     { "text": "Ask for directions to the forest's heart", "nextNode": "mushroomTrail", "statChange": { "courage": 1, "wisdom": 1 } }
@@ -66,6 +70,7 @@ const gameData = {
             
             "hillPath": {
                 "text": "The steep climb rewards you with a view of the entire forest. In the distance stands a tower made of living trees, with a door visible in its trunk.",
+                "image": "hillPath.jpeg",
                 "choices": [
                     { "text": "Head toward the living tower", "nextNode": "druidTower", "statChange": { "courage": 2 } },
                     { "text": "Continue along the ridgeline", "nextNode": "ancientRuins", "statChange": { "wisdom": 1 } }
@@ -74,6 +79,7 @@ const gameData = {
             
             "valleyPath": {
                 "text": "The misty valley is filled with wildflowers and glowing mushrooms. You discover a crystal-clear pond with what appears to be a golden key at the bottom.",
+                "image": "valleyPath.jpeg",
                 "choices": [
                     { "text": "Follow the mushroom trail", "nextNode": "mushroomTrail", "statChange": { "wisdom": 1 } },
                     { "text": "Reach for the golden key", "nextNode": "pondGuardian", "statChange": { "courage": 1 } }
@@ -82,6 +88,7 @@ const gameData = {
             
             "spriteGlade": {
                 "text": "The sprite leads you to a magical glade where dozens of forest beings feast and share ancient knowledge. As night falls, they offer you a special opportunity to become a guardian of the forest.",
+                "image": "spriteGlade.jpeg",
                 "choices": [
                     { "text": "Accept their offer", "nextNode": "guardianEnding", "statChange": { "friendship": 3, "wisdom": 2 } },
                     { "text": "Politely decline", "nextNode": "magicalGift", "statChange": { "wisdom": 1 } }
@@ -90,6 +97,7 @@ const gameData = {
             
             "spriteTrap": {
                 "text": "Your attempt to catch the sprite fails as dozens more emerge from the vegetation. They drive you away with painful pinches and bites.",
+                "image": "spriteTrap.jpeg",
                 "choices": [
                     { "text": "Retreat from the forest", "nextNode": "retreatEnding", "statChange": { "courage": -1 } },
                     { "text": "Apologize and offer a gift", "nextNode": "culturalLearning", "statChange": { "friendship": 1, "wisdom": 1 } }
@@ -98,6 +106,7 @@ const gameData = {
             
             "elderWisdom": {
                 "text": "The elder guides you along hidden paths, sharing forest history and bringing you to an ancient stone circle in a clearing. 'This place once connected humans and forest spirits,' she explains.",
+                "image": "elderWisdom.jpeg",
                 "choices": [
                     { "text": "Learn about the circle's magic", "nextNode": "ancientMagic", "statChange": { "wisdom": 3 } },
                     { "text": "Thank her and explore on your own", "nextNode": "magicalSpring", "statChange": { "courage": 1 } }
@@ -106,6 +115,7 @@ const gameData = {
             
             "mysteriousChanting": {
                 "text": "Alone in the dense woods, you hear mysterious chanting. Following it reveals druids performing a ritual that accelerates plant growth around them.",
+                "image": "mysteriousChanting.jpeg",
                 "choices": [
                     { "text": "Join their ritual", "nextNode": "druidicMagic", "statChange": { "courage": 2 } },
                     { "text": "Observe quietly and learn", "nextNode": "natureSecrets", "statChange": { "wisdom": 2 } }
@@ -114,6 +124,7 @@ const gameData = {
             
             "druidTower": {
                 "text": "Inside the living tower, an ancient druid tends a magical garden. Their eyes hold centuries of wisdom as they ask what you seek in the enchanted forest.",
+                "image": "druidTower.jpeg",
                 "choices": [
                     { "text": "Offer to help with their tasks", "nextNode": "apprenticeEnding", "statChange": { "friendship": 2, "wisdom": 1 } },
                     { "text": "Ask about hidden treasures", "nextNode": "burialTreasure", "statChange": { "courage": 1 } }
@@ -122,6 +133,7 @@ const gameData = {
             
             "nymphBlessing": {
                 "text": "The nymph blesses you with forest protection. Animals watch you with curiosity rather than fear, and you sense hidden paths that others cannot see.",
+                "image": "nymphBlessing.jpeg",
                 "choices": [
                     { "text": "Seek magical places in the forest", "nextNode": "enlightenedEnding", "statChange": { "wisdom": 1, "friendship": 2 } },
                     { "text": "Harvest valuable magical resources", "nextNode": "greedyEnding", "statChange": { "wisdom": -1, "friendship": -1 } }
@@ -130,6 +142,7 @@ const gameData = {
             
             "mushroomTrail": {
                 "text": "Following a trail of luminous mushrooms, you enter increasingly strange and magical surroundings. The forest here feels ancient and aware, watching your every step.",
+                "image": "mushroomTrail.jpeg",
                 "choices": [
                     { "text": "Continue deeper into the magic", "nextNode": "heartOfForest", "statChange": { "courage": 2 } },
                     { "text": "Gather mushrooms for their magic", "nextNode": "natureBounty", "statChange": { "wisdom": 1 } }
@@ -139,6 +152,7 @@ const gameData = {
             // Added missing nodes
             "ancientRuins": {
                 "text": "The ridgeline leads to ancient stone ruins. Weathered carvings depict humans and forest beings living in harmony. There's a sealed chamber beneath a fallen pillar.",
+                "image": "ancientRuins.jpeg",
                 "choices": [
                     { "text": "Attempt to open the sealed chamber", "nextNode": "ancientChamber", "statChange": { "courage": 2 } },
                     { "text": "Study the carvings for knowledge", "nextNode": "ancientKnowledge", "statChange": { "wisdom": 2 } }
@@ -159,6 +173,7 @@ const gameData = {
             
             "pondGuardian": {
                 "text": "As you reach for the key, a water serpent emerges. 'Few seek my treasure with such boldness,' it speaks in your mind. 'Answer my riddle, and the key is yours.'",
+                "image": "pondGuardian.jpeg",
                 "choices": [
                     { "text": "Accept the riddle challenge", "nextNode": "riddleSuccess", "statChange": { "wisdom": 2 } },
                     { "text": "Attempt to snatch the key quickly", "nextNode": "pondBattle", "statChange": { "courage": 2, "wisdom": -1 } }
